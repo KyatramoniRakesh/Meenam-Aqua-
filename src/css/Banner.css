@@ -1,0 +1,148 @@
+/* ===== BANNER WRAPPER ===== */
+.main-banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f8fafc;
+}
+
+/* ===== SLIDER WRAPPER ===== */
+.banner-slider {
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+  width: 100%;
+}
+
+/* ===== EACH SLIDE ===== */
+.banner-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== INNER CONTENT (TEXT + IMAGE) ===== */
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+  /* max-width: 1200px; */
+  margin: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* ===== LEFT SIDE (TEXT) ===== */
+.banner-left {
+  flex: 1;
+}
+
+.banner-left h2 {
+  font-size: 4rem;
+  color: #005f73;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+  align-items: left;
+  text-align: left;
+}
+
+.banner-left p {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  max-width: 600px;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.banner-btn {
+  background: #007b8f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.banner-btn:hover {
+  background: #005f73;
+}
+
+/* ===== RIGHT SIDE (IMAGE) ===== */
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-right img {
+  width: 100%;
+  height: 400px;
+  max-width: 700px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== DOT NAVIGATION ===== */
+.banner-dots {
+  text-align: center;
+  padding: 1.5rem 0 3rem;
+}
+
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: #b0dfe2;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background-color: #00758d;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .banner-inner {
+    flex-direction: column;
+    text-align: center;
+    /* padding: 3rem 1.5rem; */
+    top: 0;
+  }
+
+  .banner-left h2 {
+    font-size: 2.2rem;
+  }
+
+  .banner-left p {
+    font-size: 1rem;
+    /* margin: 0 auto 1.5rem; */
+  }
+
+  .banner-right img {
+    max-width: 100%;
+    margin-top: 1.5rem;
+    /* height: 300px; */
+  }
+}
+
+@media (max-width: 468px) {
+  .banner-left h2 {
+    font-size: 1.8rem;
+  }
+  .banner-left p {
+    font-size: 0.95rem;
+  }
+  .banner-btn {
+    padding: 0.6rem 1.4rem;
+  }
+}
