@@ -4,8 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Banner from './components/Banner';
-import AboutSection from './components/About';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ProductsPage from './components/Products/ProductsPage';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +15,11 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Banner/>
-    <AboutSection/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/products' element={<ProductsPage/>}/>
+    </Routes>
+   
     <Footer/>
     
     </>

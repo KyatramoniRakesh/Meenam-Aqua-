@@ -1,8 +1,16 @@
-import React from 'react'
-
+import React from 'react';
+import Banner from '../components/Banner';
+import AboutSection from '../components/About';
+import ProductsCategory from '../components/ProductsCategory';
+import ContactSection from '../components/contactSection';
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+     <Banner/>
+    <AboutSection/>
+    <ProductsCategory/>
+    <ContactSection/>
+    </>
   )
 }
 

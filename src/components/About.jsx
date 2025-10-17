@@ -4,6 +4,7 @@ import aboutImg from "../assets/Images/about.jpg";
 import hand from "../assets/Images/hand.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ProductsCategory from "./ProductsCategory";
 
 const AboutSection = () => {
     useEffect(() => {
@@ -69,18 +70,9 @@ const AboutSection = () => {
             </div>
 
 
-            <div className="ready-to-boost">
-                <div className="ready-to-boost-img">
-                    <img src={hand} alt="hand" className="about-image" />
-                </div>
-                <div style={{textAlign:"left"}}>
-                    <h2 className="about-title" >Ready to Boost Your Aquaculture?</h2>
-                    <p className="about-desc">
-                        Contact us today and discover how MEENAM AQUA NEEDS can deliver sustainable, high-performance results for your farm.
-                    </p>
-                </div>
 
-            </div>
+
+
         </section>
     );
 };
