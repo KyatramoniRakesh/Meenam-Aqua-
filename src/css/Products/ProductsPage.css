@@ -133,7 +133,8 @@
     border-radius: 15px;
     padding: 40px;
     align-items: stretch;
-    /* All equal height */
+    margin-bottom: 1rem;
+    /* background-color: red; */
 }
 
 /* Left small column (Image, Name, Category) */
@@ -144,16 +145,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     text-align: center;
 }
 
 .product-main-img {
     width: 90%;
-    height: 250px;
+    /* height: 350px; */
     object-fit: contain;
     border-radius: 12px;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .product-title {
@@ -212,6 +213,135 @@
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
 }
+
+
+
+
+
+/* ==================== TABLE VIEW (with extra columns + horizontal scrolling) ==================== */
+.products-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* allow horizontal scrolling */
+    overflow-y: auto;
+    /* vertical scroll if vertical size exceeds wrapper */
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1rem;
+    background: #f9feff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    /* small padding so scrollbar doesn't touch rounded corners */
+}
+
+/* Make table intentionally wide so it behaves like your reference and allows horizontal scroll */
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1600px;
+    /* increased so extra columns fit comfortably */
+    font-family: "Poppins", sans-serif;
+}
+
+/* Sticky header for nicer UX when vertically scrolling the table */
+.products-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: linear-gradient(90deg, #0097a7, #007c8a);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.products-table th {
+    text-align: left;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.products-table td {
+    padding: 18px 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #e3f6f6;
+    color: #333;
+    font-size: 0.95rem;
+    max-width: 420px;
+    word-wrap: break-word;
+}
+
+/* Zebra rows */
+.products-table tr:nth-child(even) {
+    background: #f6fefe;
+}
+
+/* image */
+.table-img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #d1f7f7;
+    background: #fff;
+    padding: 5px;
+}
+
+/* typography */
+.table-name {
+    font-weight: 700;
+    color: #004c4c;
+}
+
+.table-category {
+    font-weight: 600;
+    color: #007c7c;
+}
+
+.table-composition,
+.table-dosage,
+.table-packing,
+.table-storage {
+    color: #364545;
+    line-height: 1.5;
+}
+
+/* benefits list */
+.table-benefits ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.table-benefits li {
+    color: #005c5c;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+/* ensure table remains usable on narrow screens */
+@media (max-width: 1200px) {
+    .products-table {
+        min-width: 1400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .products-table {
+        min-width: 1200px;
+    }
+}
+
+/* if someone wants the table to compress on very small screens, you can allow cell wrapping already set via word-wrap */
+
+
+
+
+
+
+
+
 
 /* Responsive Layout */
 @media (max-width: 768px) {

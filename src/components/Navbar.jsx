@@ -1,20 +1,32 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../CSS/Navbar.css";
 import logo from "../assets/Images/MainLogo.png";
+import { useCategories } from "../context/CategoriesContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
+  const { categories, loading, error } = useCategories();
+
+  // ---------- TOGGLE FUNCTIONS ----------
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
   const closeMenu = () => setMenuOpen(false);
-
   const isActive = (path) => location.pathname === path;
+
+  // ✅ Handle category click — store in sessionStorage and navigate
+  const handleCategoryClick = (catName) => {
+    sessionStorage.setItem("selectedCategory", catName);
+    navigate("/products", { state: { category: catName } });
+    setDropdownOpen(false);
+    closeMenu();
+  };
 
   return (
     <header className="navbar">
@@ -42,6 +54,7 @@ const Navbar = () => {
             About Us
           </Link>
 
+          {/* ✅ Dynamic Product Dropdown */}
           <div className={`nav-dropdown ${dropdownOpen ? "open" : ""}`}>
             <button onClick={toggleDropdown}>
               Products
@@ -50,12 +63,25 @@ const Navbar = () => {
               />
             </button>
 
-            <div className={`dropdown-menu-wrapper ${dropdownOpen ? "show" : ""}`}>
+            <div
+              className={`dropdown-menu-wrapper ${dropdownOpen ? "show" : ""}`}
+            >
               <div className="dropdown-menu">
-                <Link to="/products/minerals" onClick={closeMenu}>Minerals</Link>
-                <Link to="/products/probiotics" onClick={closeMenu}>Probiotics</Link>
-                <Link to="/products/disinfectant" onClick={closeMenu}>Disinfectant</Link>
-                <Link to="/products/ammonia-reducer" onClick={closeMenu}>Ammonia Reducer</Link>
+                {loading && <p>Loading...</p>}
+                {error && <p>{error}</p>}
+
+                {!loading &&
+                  !error &&
+                  categories.length > 0 &&
+                  categories.map((cat) => (
+                    <button
+                      key={cat._id}
+                      className="dropdown-item"
+                      onClick={() => handleCategoryClick(cat.name)} // ✅ functional link
+                    >
+                      {cat.name}
+                    </button>
+                  ))}
               </div>
             </div>
           </div>
