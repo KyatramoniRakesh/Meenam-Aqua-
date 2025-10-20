@@ -322,3 +322,461 @@
     font-size: 0.95rem;
   }
 }
+
+
+/* ===============================
+   AQUACULTURE CTA SECTION
+=============================== */
+
+.aqua-cta {
+  background: #f8fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-content {
+  background: linear-gradient(135deg, #e9fcfc, #f2ffff);
+  border-radius: 20px;
+  text-align: center;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cta-content h2 {
+  color: #007595;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: #008d9a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 15px;
+  padding: 0.9rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 141, 154, 0.3);
+}
+
+.cta-btn:hover {
+  background-color: #007c89;
+  box-shadow: 0 8px 20px rgba(0, 141, 154, 0.4);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+
+@media (max-width: 768px) {
+  .cta-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+
+/* ===============================
+   ABOUT FEATURE CARDS
+=============================== */
+.about-features {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fbfc;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  flex: 1 1 450px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: scale(0.97);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  background: #e3f8ff;
+  color: #008d9a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  padding: 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #008d9a;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-content {
+  background: #f8fafb;
+  border-radius: 12px;
+  padding: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 992px) {
+  .about-features {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-content {
+    font-size: 0.95rem;
+  }
+}
+/* ===============================
+   CERTIFICATIONS & COMPLIANCE
+=============================== */
+
+.certifications {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: #f9ffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+/* ===== HEADING ===== */
+.certifications h2 {
+  font-size: 2.2rem;
+  color: #007d91;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ===== CARDS CONTAINER ===== */
+.certification-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== SINGLE CARD ===== */
+.cert-card {
+  background-color: #f0fcfd;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  flex: 1 1 300px;
+  max-width: 360px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cert-card:hover {
+  transform: scale(0.96);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== ICON ===== */
+.cert-icon {
+  background-color: #c6f8f8;
+  color: #004f63;
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ===== TEXTS ===== */
+.cert-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #007d91;
+  margin-bottom: 0.8rem;
+}
+
+.cert-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER TEXT ===== */
+.cert-footer {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-footer p {
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+@media (max-width: 992px) {
+  .certifications {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .certifications h2 {
+    font-size: 2rem;
+  }
+
+  .cert-card {
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certification-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cert-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .certifications h2 {
+    font-size: 1.8rem;
+  }
+
+  .cert-card p {
+    font-size: 0.9rem;
+  }
+
+  .cert-footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .certifications h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+/* ===============================
+   MANUFACTURING EXCELLENCE
+=============================== */
+
+.manufacturing-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.manufacturing-section h2 {
+  color: #007d91;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.manufacturing-section .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+/* ===== UNIT CONTAINER ===== */
+.unit-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ===== UNIT CARD ===== */
+.unit-card {
+  background: #f9ffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  flex: 1 1 450px;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== HEADER ===== */
+.unit-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.unit-icon {
+  background-color: #c6f8f8;
+  color: #007d91;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+
+.unit-header h3 {
+  font-size: 1.2rem;
+  color: #007d91;
+  font-weight: 600;
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+  background: #eefcfc;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.info-box h4 {
+  font-size: 1rem;
+  color: #007d91;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.info-box p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== MAP ===== */
+.map-box iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+@media (max-width: 992px) {
+  .manufacturing-section h2 {
+    font-size: 2rem;
+  }
+  .unit-card {
+    flex: 1 1 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .manufacturing-section {
+    padding: 3rem 1rem;
+  }
+  .manufacturing-section h2 {
+    font-size: 1.8rem;
+  }
+  .unit-card {
+    padding: 1.5rem;
+  }
+}
