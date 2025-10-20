@@ -1,9 +1,8 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 
-// Create the context
 export const CategoriesContext = createContext();
 
-// Provider component
+
 export const CategoriesProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -33,7 +32,6 @@ export const CategoriesProvider = ({ children }) => {
   );
 };
 
-// ✅ Custom hook for easier access
 export const useCategories = () => {
   const context = useContext(CategoriesContext);
   if (!context) {

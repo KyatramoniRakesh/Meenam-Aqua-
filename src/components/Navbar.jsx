@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../CSS/Navbar.css";
+import "../css/Navbar.css";
 import logo from "../assets/Images/MainLogo.png";
 import { useCategories } from "../context/CategoriesContext";
 

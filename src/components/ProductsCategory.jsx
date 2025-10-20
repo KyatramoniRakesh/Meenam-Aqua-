@@ -2,10 +2,10 @@ import React from "react";
 import "../css/ProductsCategory.css";
 import { FaCube } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useCategories } from "../context/CategoriesContext"; // ✅ Use shared context
+import { useCategories } from "../context/CategoriesContext"; 
 
 const ProductsCategory = () => {
-  const { categories, loading, error } = useCategories(); // ✅ Access global data
+  const { categories, loading, error } = useCategories(); 
 
   return (
     <section className="product-categories">

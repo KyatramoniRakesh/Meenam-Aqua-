@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS/Footer.css";
+import "../css/Footer.css";
 import { FaWhatsapp } from "react-icons/fa";
 import logo from "../assets/Images/MainLogo.png";
 
