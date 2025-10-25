@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ProductsPage from './components/Products/ProductsPage';
 import Contact from './pages/Contact';
 import Aboutus from './pages/Aboutus';
+import Gallery from './pages/Gallery';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path='/products' element={<ProductsPage/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<Aboutus/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>
     </Routes>
    
     <Footer/>

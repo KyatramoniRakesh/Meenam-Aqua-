@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 const ProductsPage = () => {
   const location = useLocation();
 
-  // ✅ Get selected category (either from Link state or sessionStorage)
   const initialCategory =
     location.state?.category || sessionStorage.getItem("selectedCategory") || "All Products";
 
@@ -46,7 +45,6 @@ const ProductsPage = () => {
         setCategories(["All Products", ...new Set(catNames)]);
         setProducts(allProducts);
 
-        // ✅ If user came from another page, set that category active
         if (initialCategory && catNames.includes(initialCategory)) {
           setActiveCategory(initialCategory);
         } else {
@@ -63,7 +61,6 @@ const ProductsPage = () => {
     fetchProducts();
   }, []);
 
-  // ✅ Update activeCategory dynamically when user navigates again
   useEffect(() => {
     if (location.state?.category) {
       setActiveCategory(location.state.category);

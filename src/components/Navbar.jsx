@@ -20,7 +20,6 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
   const isActive = (path) => location.pathname === path;
 
-  // ✅ Handle category click — store in sessionStorage and navigate
   const handleCategoryClick = (catName) => {
     sessionStorage.setItem("selectedCategory", catName);
     navigate("/products", { state: { category: catName } });
@@ -54,7 +53,7 @@ const Navbar = () => {
             About Us
           </Link>
 
-          {/* ✅ Dynamic Product Dropdown */}
+          {/*  Dynamic Product Dropdown */}
           <div className={`nav-dropdown ${dropdownOpen ? "open" : ""}`}>
             <button onClick={toggleDropdown}>
               Products
@@ -77,7 +76,7 @@ const Navbar = () => {
                     <button
                       key={cat._id}
                       className="dropdown-item"
-                      onClick={() => handleCategoryClick(cat.name)} // ✅ functional link
+                      onClick={() => handleCategoryClick(cat.name)} 
                     >
                       {cat.name}
                     </button>
@@ -103,7 +102,7 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Hamburger Icon */}
+        
         <div className="nav-toggle" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>

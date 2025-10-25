@@ -33,7 +33,7 @@ const ProductsCategory = () => {
               </div>
               <h3>{item.name}</h3>
 
-              {/* ✅ Keep passing category name to /products */}
+              
               <Link
                 to="/products"
                 state={{ category: item.name }}

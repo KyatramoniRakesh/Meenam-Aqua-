@@ -1,0 +1,191 @@
+/* ======================================
+   ✅ GALLERY BANNER SECTION
+====================================== */
+.gallery-banner {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-content {
+  text-align: left;
+  width: 90%;
+  max-width: 1200px;
+  color: #fff;
+  padding-left: 60px;
+}
+
+.gallery-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e5007e;
+  margin-bottom: 10px;
+}
+
+.gallery-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fafafa;
+}
+
+
+/* ======================================
+   ✅ GALLERY GRID SECTION
+====================================== */
+.gallery-section {
+  width: 100%;
+  padding: 60px 5%;
+  background: #fafafa;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #000;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  width: 280px;
+  height: 320px;
+}
+
+.gallery-card img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-in-out;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ✅ Text Label Overlay */
+.gallery-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ==================================================
+   ✅ RESPONSIVE DESIGN
+================================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .gallery-content {
+    padding-left: 30px;
+  }
+
+  .gallery-content h1 {
+    font-size: 3rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-banner {
+    height: 260px;
+  }
+
+  .gallery-content {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .gallery-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-content p {
+    font-size: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  
+
+  .gallery-label {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===================================
+   BACK TO TOP BUTTON
+=================================== */
+.back-to-top-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.back-to-top-btn {
+  background: #c33787; /* Pink button */
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+.arrow {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
